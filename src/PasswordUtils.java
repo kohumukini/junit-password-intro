@@ -81,7 +81,15 @@ public class PasswordUtils {
     public static int countSpecialCharacters(String password) {
     // TODO: Make tests FIRST, then implement the method
     // Please have your tests in a separate commit from the implementation
-        return 0;
+        int count = 0; 
+
+        for (int i = 0; i <= password.length() - 1; i++) {
+            char c = password.charAt(i); 
+
+            if (!Character.isLetterOrDigit(c)) count++; 
+        }
+
+        return count; 
     }
 
 }
